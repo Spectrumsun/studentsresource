@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "node": ">= 7.6.0"
-
+},
   "scripts": {
     "start": "node start.js",
     "watch": "nodemon ./start.js --ignore public/",
