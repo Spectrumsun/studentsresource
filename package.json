@@ -4,14 +4,7 @@
   "private": true,
   "engines": {
     "node": ">= 7.6.0"
-  },
-  "now": {
-    "dotenv": "variables.env.now"
-  },
 
-  "now": {
-    "dotenv": "variables.env.now"
-  },
   "scripts": {
     "start": "node start.js",
     "watch": "nodemon ./start.js --ignore public/",
