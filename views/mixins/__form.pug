@@ -1,0 +1,46 @@
+mixin form(resource = {})
+		form.formInput(action=`/create/${resource._id || ""}` method="POST" enctype="multipart/form-data")
+			.form-row
+				.form-group.col-md-6
+					label(for='firstname') Firstname
+					input.form-control(type='text' name="firstname" id="firstname" value=resource.firstname placeholder='John' required)
+				.form-group.col-md-6
+					label(for='lastname') Lastname
+					input.form-control(type='text' name="lastname" id="lastname" value=resource.lastname placeholder='Doe' required)
+				.form-group.col-md-6
+					label(for='middlename') Middle name
+					input.form-control(type='text' name="middlename" id="middlename" value=resource.middlename placeholder='Will' required)
+				.form-group.lab
+					.container
+						.form-check.form-check-inline
+							label.form-check-label
+								input#inlineRadio1.form-check-input(type='radio',  name='gender', value='Male' required)
+								|  Male
+						.form-check.form-check-inline
+							label.form-check-label
+								input#inlineRadio2.form-check-input(type='radio', name='gender', value='Female' required)
+								|  Female
+				.form-group.col-md-6
+					label(for='nationality') Nationality
+					input.form-control(type='text' name="nationality" id="nationality" value=resource.nationality placeholder='Nigeria' required)
+				.form-group.col-md-6
+					label(for='address') Address
+					input.form-control(type='text' name="address" id="address" value=resource.address placeholder='No, 112 Main St' required)
+				.form-group.col-md-6
+					label(for='state_of_origin') State of origin
+					input.form-control(type='text' name="state_of_origin" id="state_of_origin" value=resource.state_of_origin placeholder='Lagos State' required)
+				.form-group.col-md-6
+					label(for='date_of_birth') Date of birth
+					input.form-control(type='date' name="date_of_birth"  id="date_of_birth" value=resource.date_of_birth placeholder='dd-mm-year' required)
+				.form-group.col-md-6
+					label(for='matric_number') Matric number
+					input.form-control(type='number' name="matric_number" id="matric_number" value=resource.matric_number placeholder='0700902391' required)
+				.form-group.col-md-6
+					label(for='year_of_admission') Year of Admission
+					input.form-control(type='number' name="year_of_admission" id="year_of_admission"  value=resource.year_of_admission placeholder='2017' required)
+				.form-group.col-md-6
+					label(for='photo') Photo
+					input.form-control(type='file' name="photo" id="photo" accept="image/gif, image/png, image/jpeg")
+					if resource.photo
+						img(src=`/uploads/${resource.photo}`, alt=resource.firstname)
+			button.btn.btn-primary(type='submit') Save

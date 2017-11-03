@@ -1,0 +1,9 @@
+extends layout
+
+include mixins/__form
+
+block content
+	.container
+		h2= title
+		+form(resource)
+		

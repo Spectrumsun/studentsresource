@@ -1,0 +1,25 @@
+extends layout
+
+
+block content
+	.container
+		h2= title
+		.container
+			img.card-img-top.img-thumbnail.fullPix(src=`/uploads/${resource.photo || "student.png"}`, class="" alt='Card image cap')
+			h6 Name: #{resource.firstname}  #{resource.lastname} #{resource.middlename} #{resource.lastname} 
+			h6 Address: #{resource.address} 
+			h6 State: #{resource.state_of_origin} 
+			h6 Gender: #{resource.gender} 
+			h6 Nationality: #{resource.nationality} 
+			h6  Date of Birth: #{resource.date_of_birth}  
+			h6 Year of Admmission: #{resource.year_of_admission}
+			a.btn.btn-primary(href=`/show/student/${resource._id}/edit`) Edit
+			form.del(action=`/show/${resource._id}?_method=DELETE` method="POST")
+				button.btn.btn-danger(value="Delete") Delete
+			
+
+		
+
+		
+			
+

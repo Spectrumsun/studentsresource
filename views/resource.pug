@@ -1,0 +1,15 @@
+extends layout
+
+include mixins/_resourceCard
+
+block content
+	.container
+		h2= title
+		each resource in resources
+			+resourceCard(resource)
+
+		
+
+		
+			
+
