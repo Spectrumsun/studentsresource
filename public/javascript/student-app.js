@@ -2,7 +2,7 @@ const form = document.querySelector("form");
 const formInput = document.querySelector(".formInput");
 
 
-function searchResultsHtml(resources){
+/*function searchResultsHtml(resources){
 	return resources.map(resource => {
 		return `
 			<a href="/show/${resource._id} class="searcResult">
@@ -50,7 +50,7 @@ typeAhead(form);
 function see(test){
 
 }
-
+*/
 
 $(".btn").click(function(){
 	let errorMessage = "";
