@@ -81,7 +81,7 @@ $(".btn").click(function(){
 	}
 
 	if ($("#date_of_birth").val() == ""){
-		fieldMissing += "<br>Date_of BirtH";
+		fieldMissing += "<br>Date of Birth";
 	}
 
 	if ($("#matric_number").val() == "" ){
